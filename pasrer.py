@@ -21,7 +21,7 @@ with TelegramClient('session_name', api_id, api_hash) as client:
                 break
 
     if not target_folder:
-        print(f"Папка с названием '{target_folder_name}' не найдена.")  # Folder with [folder name] not found
+        print(f"Папка с названием '{target_folder_name}' не найдена.")  # Folder with folder name not found
         exit()
 
     dialogs = client.get_dialogs()
@@ -45,4 +45,4 @@ with open(output_filename, "w", encoding="utf-8") as f:
         f.write(f"\"{username}\",\n")
     f.write("]\n")
 
-print(f"{len(usernames)} юзернеймов сохранено в {output_filename}") # OK! [num] usernames saved in [filename]
+print(f"{len(usernames)} юзернеймов сохранено в {output_filename}") # OK!
